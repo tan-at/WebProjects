@@ -3,6 +3,10 @@ Covid 19 Data Exploration
 Skills used: Joins, CTE's, Temp Tables, Windows Functions, Aggregate Functions, Creating Views, Converting Data Types
 */
 
+/*
+Link to Tableau dashboard utilizing the data: https://public.tableau.com/app/profile/atte7584/viz/CovidDashboardProject_16408059136170/Dashboard1
+*/
+
 SELECT *
 FROM PortfolioProject..CovidDeaths$
 Where continent is not null
