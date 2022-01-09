@@ -9,6 +9,8 @@ Project made to learn more about handling data and formatting it to an easily pr
 Made with the help of Alex Freberg's tutorial (https://www.youtube.com/watch?v=qfyynHBFOsM).
 
 Here is the link to the finished dashboard you can interact with: https://public.tableau.com/app/profile/atte7584/viz/CovidDashboardProject_16408059136170/Dashboard1
+
+The skills used in the project could easily be extended to handling and utilizing business data, such as the sales numbers or market demographics of a product.
 	
 ## Technologies
 Project is created with:
