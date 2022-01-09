@@ -4,6 +4,7 @@
 * [General info](#general-info)
 * [Technologies](#technologies)
 * [Setup](#setup)
+* [Demonstration](#demonstration)
 
 ## General info
 Project made to learn more about user authentication by making a React app and using Userfront API to secure the App and API endpoint. In the future I wish to implement the authentication into a larger project as a way of identification; perhaps first to a frontend, and then a fullstack project.
@@ -24,7 +25,7 @@ $ npm start
 ```
 Once the program is open, you can log in as a testUser with the username 'testi@kayttaja.com' and the password 'salainensalasana'
 
-## Demonstration of the basic ui.
+## Demonstration
 * (1.) The program consists if 4 pages: Home (Sign up), Login, Password Reset & Dashboard. When the page is first opened, the user is prompted to sign up at the home screen. 
 * (2.) The login screen for an existing user to Log in.
 * (3.) A password reset screen, where a user can request their password to be reset.
