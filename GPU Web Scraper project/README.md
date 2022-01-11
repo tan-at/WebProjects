@@ -1,4 +1,4 @@
-# User account demo
+# GPU Web Scraper project
 
 ## Table of contents
 * [General info](#general-info)
