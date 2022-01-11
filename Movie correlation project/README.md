@@ -1,4 +1,4 @@
-# User account demo
+# Movie correlation project
 
 ## Table of contents
 * [General info](#general-info)
