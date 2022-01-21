@@ -6,11 +6,11 @@
 * [Setup](#setup)
 
 ## General info
-The project was made to get more familiar with backend projects using Node.js and CRUD. It's a simple task manager, where the user can create new tasks and 
-read/update/delete existing ones. The project stores the used database in a MongoDB cloud database, and uses an MVC (Model-View-Controller) design pattern, 
+The project is a simple task manager, where the user can create new tasks and read/update/delete existing ones. It was made to get more familiar with backend projects using Node.js and CRUD. The project stores the used database in a MongoDB cloud database, and uses an MVC (Model-View-Controller) design pattern, 
 making it easier to code, debug and test.
 
 In the future, especially if deploying the project, I'd like to add some sort of user authentication and other essential security features, such as API protection.
+I hope to use the things I learned in this project to make a more comprehensive fullstack project later on. 
 Made with the help of John Smilga's tutorial (https://www.youtube.com/watch?v=rltfdjcXjmk) and the frontend he provided.
 	
 ## Technologies
