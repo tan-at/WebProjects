@@ -3,6 +3,6 @@ Repossa näkyy opintojen aikana ja omalla ajalla tekemiäni koodikyhäelmiä. Ku
 
 Datan pyörittelyä löytyy **COVID data**, **GPU Web Scraper** ja **Movie correlation** -projektien alta.
 
-Web-sovelluksen käyttäjänhallintaa on projektissa **Task manager Backend** 
+Web-sovelluksen käyttäjänhallintaa on projektissa **Task manager Backend**.
 
 **Web-ohjelmointi** keskittyy full-stack web-ohjelmointiin.
