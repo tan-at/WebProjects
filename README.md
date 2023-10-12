@@ -1,7 +1,6 @@
-# Portfolioprojekteja
-Repossa näkyy opintojen aikana ja omalla ajalla tekemiäni koodikyhäelmiä. Kunkin projektin alta löytyy tarkempi projektikohtainen Readme, josta voi lukea projektista läheisemmin.
+# WebProjects
 
-Datan pyörittelyä löytyy **COVID data**, **GPU Web Scraper** ja **Movie correlation** -projektien alta.
+Täältä löytyy opintojen ja omalla ajalla tekemiäni koodikyhäelmiä. Kunkin projektin alta löytyy tarkempi projektikohtainen Readme, josta voi lukea projektista läheisemmin.
 
 Web-sovelluksen käyttäjänhallintaa on projektissa **Task manager Backend**.
 
