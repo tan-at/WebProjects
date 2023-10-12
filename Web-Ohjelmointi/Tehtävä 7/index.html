@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Web-Ohjelmoinnin kehittäjäblogi</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-xl bg-dark navbar-dark py-3 fixed-top">
+      <div class="container">
+        <a href="#" class="navbar-brand">Web-Ohjelmoinnin kehittäjäblogi</a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navmenu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navmenu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a href="#tehtava_1" class="nav-link">Tehtävä 1</a>
+            </li>
+            <li class="nav-item">
+              <a href="#tehtava_2" class="nav-link">Tehtävä 2</a>
+            </li>
+            <li class="nav-item">
+              <a href="#tehtava_3" class="nav-link">Tehtävä 3</a>
+            </li>
+            <li class="nav-item">
+              <a href="#tehtava_4" class="nav-link">Tehtävä 4</a>
+            </li>
+            <li class="nav-item">
+              <a href="#tehtava_5" class="nav-link">Tehtävä 5</a>
+            </li>
+            <li class="nav-item">
+              <a href="#tehtava_6" class="nav-link">Tehtävä 6</a>
+            </li>
+            <li class="nav-item">
+              <a href="#tehtava_7" class="nav-link">Tehtävä 7</a>
+            </li>
+            <li class="nav-item">
+              <a href="#palauteosio" class="nav-link">Palauteosio</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Showcase -->
+    <section
+      class="bg-dark text-light p-5 p-lg-0 pt-lg-5 text-center text-sm-start"
+    >
+      <div class="container">
+        <div class="d-sm-flex align-items-center justify-content-between">
+          <div>
+            <h1>Web-Ohjelmoinnin kehittäjäblogi</h1>
+            <p class="lead my-4">
+              Kehittäjäblogissani esittelen kurssin Web-Ohjelmointi aikana
+              tekemiäni ohjelmointitehtäviä, sekä sitä, miten yleisesti
+              suoriuduin kurssista. Blogin pitäisi olla toimiva myös pienessä
+              ikkunassa tai mobiilinäytöllä, mutta tietenkin vain jos olen
+              tehnyt kaiken onnistuneesti :D
+            </p>
+          </div>
+          <img
+            class="img-fluid w-50 d-none d-sm-block"
+            src="img/showcase.svg"
+            alt=""
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Sections -->
+    <!-- Tehtävä 1 -->
+    <section id="tehtava_1" class="p-5">
+      <div class="container">
+        <div class="row align-items-center justify-content-between">
+          <div class="col-md">
+            <img src="img/1_web_developer.svg" class="img-fluid" alt="" />
+          </div>
+          <div class="col-md p-5">
+            <h2>Tehtävä 1</h2>
+            <p class="lead">
+              Javascript-sovellus, joka kysyy käyttäjältä merkkijonon, ja
+              tarkistaa onko se palindromi.
+            </p>
+            <p>
+              Harjoitusta tehdessä huomasin, että kyseessä on tosiaan uuden
+              ohjelmointikielen opettelu. Javalla tai Pythonilla vastaava
+              tehtävä olisi onnistunut heti, mutta nyt jouduin miettimään, miten
+              kieli eroaa aiemmista oppimistani. Yhdeksi sielua raastavaksi
+              eroksi huomasin sen, että vertailu, joka on Javassa x == y, onkin
+              JavaScriptissä x === y. Pikkujuttuja, mutta tärkeitä sellaisia
+              koodin toimivuuden kannalta.
+            </p>
+            <p>
+              Näin jälkeenpäin ajateltuna tehtävä ei ollut kovinkaan
+              monimutkainen, mutta ehkä tarkoituksena oli tuoda esiin sitä,
+              minkälaista on opetella uusi ohjelmointikieli, joka toimii
+              erilaisilla säännöillä.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tehtävä 2 -->
+    <section id="tehtava_2" class="p-5 bg-dark text-light">
+      <div class="container">
+        <div class="row align-items-center justify-content-between">
+          <div class="col-md p-5">
+            <h2>Tehtävä 2</h2>
+            <p class="lead">
+              Javascript-puhelinluettelosovellus, ja siihen puhelinnumeron
+              hakeminen ja palauttaminen funktiona.
+            </p>
+            <p>
+              Harjoituksessa tehtiin ohjelma, joka kysyy käyttäjältä listassa
+              olevan henkilön nimeä; jos henkilö löytyy listassa, näytä listassa
+              oleva henkilön puhelinnumero.
+            </p>
+            <p>
+              Hankalaksi tehtävässä osoittautui listaan viittaaminen. Pähkäilin
+              asiaa pari tuntia, luoden epäonnistuneita yrityksiä toistensa
+              perään, kunnes lopulta tein simppelin if-else rakenteen, joka
+              toimii vain tehtävässä annetussa tilanteessa.
+            </p>
+            <p>
+              Tehtävä toi hyvää harjoitusta uuden kielen opetteluun, sekä
+              if-else-rakenteisiin. Jos Javascript-taitoni olisivat olleet
+              paremmalla tasolla, olisin ehkä voinut tehdä vähemmän spagettia
+              muistuttavaa koodia. Ehkä sitten jatkokurssilla.
+            </p>
+          </div>
+          <div class="col-md">
+            <img src="img/2_profile_data.svg" class="img-fluid" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tehtävä 3 -->
+    <section id="tehtava_3" class="p-5">
+      <div class="container">
+        <div class="row align-items-center justify-content-between">
+          <div class="col-md">
+            <img src="img/3_add_information.svg" class="img-fluid" alt="" />
+          </div>
+          <div class="col-md p-5">
+            <h2>Tehtävä 3</h2>
+            <p class="lead">
+              Luokkamäärittelyn opettelua yläluokkien (Henkilö) ja niiden
+              ominaisuuksia perivien alaluokkien (Urheilija) koodaamisen
+              muodossa. Lisäksi luokille omat get- ja set-funktiot.
+            </p>
+            <p>
+              Luokkien luominen sujui ongelmitta, mutta jostain syystä get- ja
+              set-metodit eivät toimineet odotetulla tavalla. Sain ohjelman
+              käynnistyksen yhteydessä virhetekstin “RangeError: Maximum call
+              stack size exceeded”, jonka paikansin herjaavan get- ja
+              set-metodejani, mutta en sitä tarkemmin.
+            </p>
+            <p>
+              Tämäkin tehtävä näytti, että vaikka vanhassa tutussa
+              ohjelmointikielessä joku tehtävä olisi helppoa, on se uudella
+              kielellä toteutettaessa aina jonkinlainen haaste. Tässä
+              tapauksessa se osoittautui suurehkoksi sellaiseksi; vaikkakin
+              omasta mielestäni sain kaiken tehtävässä tehtyä, eivät get-ja
+              set-metodit toimineet jostain syystä.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tehtävä 4 -->
+    <section id="tehtava_4" class="p-5 bg-dark text-light">
+      <div class="container">
+        <div class="row align-items-center justify-content-between">
+          <div class="col-md p-5">
+            <h2>Tehtävä 4</h2>
+            <p class="lead">
+              Tehtävän A-osassa tehtiin REST API:lla sanakirja, ja siihen GET-
+              ja POST-metodit. B-osassa REST API:in lisättiin käyttöliittymä,
+              jonka avulla voi lisätä ja hakea sanoja sanakirjasta.
+            </p>
+            <p>
+              A-osa onnistui ilman suuria ongelmia, etenkin get-all-metodi, sai
+              tehtyä luentoja seuraamalla. Ongelmia minulle tuli yksittäisten
+              sanojen palautuksen ja lisäyksen kanssa, vaikkakin sain ne
+              toimimaan vähän koodia näprättyäni.
+            </p>
+            <p>
+              Koska tehtävässä annettiin mahdollisuus toteuttaa tiedoston
+              käsittely joko synkronisesti tai asynkronisesti, olisi
+              kiinnostavaa toteuttaa se toisella tavalla, jos tehtävää tekisi
+              uudestaan. Se varmasti toisi omia haasteitaan, mutta opettaisi
+              asioita myös.
+            </p>
+            <p>
+              B:osiossa tehtiin html:lä käyttöliittymä A-osioon, jonka toteutus
+              ei onnistunut halutulla tavalla. Sain käyttöliittymään joitain
+              haluttuja elementtejä (esim. toimivan Post-metodin), mutta en
+              läheskään kaikkea, mitä tehtävään oli tarkoitus lisätä, kuten
+              get-metodia.
+            </p>
+            <p>
+              Tehtävä opetti yhdistämään backendin frontendiin, mikä on todella
+              hyödyllinen ja paljon käytetty osa web-ohjelmointia. Kenties nyt
+              osaisin tehdä käyttöliittymän paremmin, etenkin Bootstrapilla
+              jonkin verran leikkineenä. Get-metodi saattaisi silti tuottaa
+              jonkin verran työtä.
+            </p>
+          </div>
+          <div class="col-md">
+            <img src="img/4_maintenance.svg" class="img-fluid" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tehtävä 5 -->
+    <section id="tehtava_5" class="p-5">
+      <div class="container">
+        <div class="row align-items-center justify-content-between">
+          <div class="col-md">
+            <img src="img/5_design_notes.svg" class="img-fluid" alt="" />
+          </div>
+          <div class="col-md p-5">
+            <h2>Tehtävä 5</h2>
+            <p class="lead">
+              Expressiä ja mySQL:lää hyödyntävä Node.js-sovellus, jossa on
+              toimivat perusmetodit; get, put, post ja delete.
+            </p>
+            <p>
+              Tehtävässä tarkoituksenamme oli kehittää get, add, post ja delete
+              -metodit luennoilla käytyyn
+              SQL/express-puhelinluettelosovellukseemme. Vaikka alussa tehtävä
+              tuntui vaikealta, sain sen tehtyä ilman suuria onglemia. Isoi
+              ongelma taisi olla merkkien ' ja ´ välillä.
+            </p>
+            <p>
+              Tässä vaiheessa kurssia alkoi jo huomata, miten paljon SQL:län
+              käyttö oli jo muuttunut tutummaksi; aikaisempiin SQL-tehtäviin
+              verrattuna tämä tehtävä sujui onnistuneesti.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tehtävä 6 -->
+    <section id="tehtava_6" class="p-5 bg-dark text-light">
+      <div class="container">
+        <div class="row align-items-center justify-content-between">
+          <div class="col-md p-5">
+            <h2>Tehtävä 6</h2>
+            <p class="lead">
+              Javascript-palvelinsovellus, jossa on express-REST-rajapinta, sekä
+              Reactilla toteutettu käyttöliittymä, jossa hyödynnetään myös
+              Bootstrapia.
+            </p>
+            <p>
+              Tehtävänämme oli laajentaa aikaisempaa (tai ainakin samanmallista)
+              urheilijatehtäväämme laajemmaksi tietokantasovellukseksi front- ja
+              back-endeineen. Tätä tehtävää alustavina viikkoina ja niiden
+              luennoilla tuntui siltä, että sain kurssista parhaiten jotain
+              irti; kenties koska viikon asiat tuntuivat kiinnostavilta, tai
+              ehkä sen takia, että pääsimme itse tekemään laajaa sovellusta
+              kurssin loppuprojektin muodossa ensimmäistä kertaa.
+            </p>
+            <p>
+              Tein omani puhelinluettelosovelluksen tuntiesimerkin koodin
+              pohjalta, ja siten sainkin parhaiten itseni käymään koodia läpi
+              muutellen sitä haluamiini suuntiin. Jostain syystä tuntuu siltä,
+              etten saanut tietokantaani ja sovellustani yhdistettyä, vaikka
+              tein kaiken tuntiesimerkkien mukaisesti (ainakin uskon tehteeni
+              näin). Sain kuitenkin front-endin toimimaan tavoitteideni
+              mukaisesti, vaikka back-endissä onkin jotain vikaa.
+            </p>
+            <p>
+              Tämä tehtävä oli mielestäni kurssin parhainta antia: Pääsimme
+              hyödyntämään aiempina viikkoina hankkimaamme osaamista, ja
+              soveltamaan sen avulla toimivan sovelluksen tietokantoineen ja
+              käyttöliittymineen. En osannut vielä tehtävää tehdessäni
+              Bootstrapin käyttöä, joten frontend on aika tönkön näköinen. Jos
+              rukkaisin tehtävää uudelleen, tekisin Bootstrapilla frontendin.
+            </p>
+          </div>
+          <div class="col-md">
+            <img src="img/6_react.svg" class="img-fluid" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tehtävä 7 -->
+    <section id="tehtava_7" class="p-5">
+      <div class="container">
+        <div class="row align-items-center justify-content-between">
+          <div class="col-md">
+            <img src="img/7_fundamentals.svg" class="img-fluid" alt="" />
+          </div>
+          <div class="col-md p-5">
+            <h2>Tehtävä 7</h2>
+            <p class="lead">
+              ePortfolio Bootstrapilla, jossa esitellään kurssin aikana tehdyt
+              tehtävät, sekä arvioidaan sitä, mitä kurssilla on oppinut, missä
+              on onnistunut ja minkä kanssa on ollut hankaluuksia.
+            </p>
+            <p>
+              Tehtävässä saimme valita, teemmekö kotisivun valmista pohjaa
+              käyttäen, vai itse alusta asti. Päädyin tekemään harjoituksen
+              ilman valmista pohjaa Youtube-tutorialin avulla (tutorialissa
+              tehtiin kuvitteelliselle yritykselle kotisivut). Tutorialista
+              opittujen asioiden jälkeen sain tehtyä portfolion ilman suuria
+              ongelmia. Uskon, että opin asiat hyvin toimimalla näin.
+            </p>
+            <p>
+              Tämä, heti tehtävä 6:en jälkeen, oli lempparini tällä kurssilla.
+              Bootstrappia käytäessä pääsi heti näkemään, miten asiat alkoivat
+              muodostumaan koodilta valmiille sivulle.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Palauteosion Accordion -->
+    <section id="palauteosio" class="p-5">
+      <div class="container">
+        <h2 class="text-center mb-4">Palauteosio</h2>
+        <div class="accordion accordion-flush" id="questions">
+          <!-- Item 1 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#palaute-one"
+              >
+                Taitojen kehittyminen kurssilla
+              </button>
+            </h2>
+            <div
+              id="palaute-one"
+              class="accordion-collapse collapse"
+              data-bs-parent="#questions"
+            >
+              <div class="accordion-body">
+                Kurssin alussa taitoni kaiken web-kehitykseen liittyvän kanssa
+                olivat lähellä nollaa. Kurssin lopussa olen huomannut oppineeni
+                SQL:lää, reactia, JavaScriptiä ja vähän Html:ää ja CSS:ää. Näitä
+                taitoja haluan jatkossakin kehittää pidemmälle; on se sitten
+                kurssien tai itseopiskelun avulla.
+              </div>
+            </div>
+          </div>
+          <!-- Item 2 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#palaute-two"
+              >
+                Ajankäyttö
+              </button>
+            </h2>
+            <div
+              id="palaute-two"
+              class="accordion-collapse collapse"
+              data-bs-parent="#questions"
+            >
+              <div class="accordion-body">
+                Tämän, kuten muidenkin ohjelmointikurssien ajankäytön olen
+                huomannut melkein automaattisesti menevän lähelle suositeltua
+                133 tuntia, koska kurssit vaativat aina itsenäistä opiskelua
+                ohjelmoinnin muodossa (ja tietenkin ohjelmien virhekoodien
+                googlailussa ja korjailussa).
+              </div>
+            </div>
+          </div>
+          <!-- Item 3 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#palaute-three"
+              >
+                Oppimista tukeneet tai häirinneet asiat
+              </button>
+            </h2>
+            <div
+              id="palaute-three"
+              class="accordion-collapse collapse"
+              data-bs-parent="#questions"
+            >
+              <div class="accordion-body">
+                Kenties eniten kurssin opiskelua hankaloittivat muut syksynajan
+                opintoni. Esimerkiksi Tietorakenteet ja algoritmit -kurssi vaati
+                paljon opiskelupanostusta ajallisesti, joten tuntui siltä, ettei
+                muille kursseille jäänyt juurikaan aikaa. Web-ohjelmoinnin lopun
+                lähestyessä päädyinkin jäämään aikatauluista jälkeen, mutta olen
+                silti iloinen siitä, että sain palautettua työni (vaikkakin
+                myöhässä).
+              </div>
+            </div>
+          </div>
+          <!-- Item 4 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#palaute-four"
+              >
+                Apu kurssin aikana
+              </button>
+            </h2>
+            <div
+              id="palaute-four"
+              class="accordion-collapse collapse"
+              data-bs-parent="#questions"
+            >
+              <div class="accordion-body">
+                Kurssin aikana luennot olivat paras tapa oppia (heti tietenkin
+                itse tekemisen jälkeen). Jotenkin jäi kuitenkin tuntumaan siltä,
+                että kurssilla vaadittiin liian paljon itsenäisesti ottamaan
+                asioista selvää; olisin halunnut kurssimateriaalia, jossa
+                ohjeistetaan asioissa esimerkkien muodoissa, esimerkiksi mitä
+                tietty komento tai koodinpätkä tekee, ja miksi se tekee sen. Nyt
+                lopussa tuntuu siltä, että kurssilla hankkimani tietämys
+                asioista jäi aika ohueksi. Näin jälkikäteen ajateltuna olisi
+                ehkä ollut hyödyksi pyytää palautetta tehtävistä, mutta pitänee
+                tehdä niin sitten ensi kurssilla.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#palaute-five"
+              >
+                Kurssin kohokohdat ja puutteet
+              </button>
+            </h2>
+            <div
+              id="palaute-five"
+              class="accordion-collapse collapse"
+              data-bs-parent="#questions"
+            >
+              <div class="accordion-body">
+                Kurssin loppuprojekti oli ylivoimaisesti paras osa kurssia: Se
+                herätti mielenkiintoni web-kehittämistä kohtaan, koska sitä
+                tehdessäni pääsin ensimmäistä kertaa toteuttamaan itsenäisesti
+                oikeaa tietokantaa front- ja back-endeineen.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#palaute-six"
+              >
+                Web-Ohjelmointiin liittyvät suunnitelmat
+              </button>
+            </h2>
+            <div
+              id="palaute-six"
+              class="accordion-collapse collapse"
+              data-bs-parent="#questions"
+            >
+              <div class="accordion-body">
+                Haluaisin jatkaa web-ohjelmoinnin jatkokurssilla opiskelua, jos
+                vain saan sen mahtumaan lukujärjestykseeni muidenkin kurssien
+                kanssa. Ehkä saatan päätyä työelämässäni jossain vaiheessa
+                web-kehityksen pariin.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="p-5 bg-dark text-white text-center position-relative">
+      <div class="container">
+        <p class="lead">Copyright &copy; 2021 Atte Tanskanen</p>
+        <a href="#" class="position-absolute bottom-0 end-0 p-5">
+          <i class="bi bi-arrow-up-circle h1"></i>
+        </a>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
