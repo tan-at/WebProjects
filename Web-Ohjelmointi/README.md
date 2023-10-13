@@ -4,7 +4,7 @@ Sisältää kurssin Web-ohjelmointi tehtäviä. Kurssilla perehdyttiin full-stac
 
 Kurssilla käytettyjä kieliä ja työkaluja ovat JavaScript, HTML, CSS, MySQL (MariaDB:llä), sekä React ja Postman. 
 
-Kurssi suoritettu loppuun Joulukuussa 2021, ja tiedostot pushattu GitLabiin.
+Kurssi suoritettu loppuun Joulukuussa 2021, ja tiedostot pushattu GitLabiin. **Tehtävä 7** bootstrap-sivussa näkyy kurssin lopussa kirjoittamani tarkemmat kuvaukset tehtävistä.
 
 ## Edit 12.10.2023
 
