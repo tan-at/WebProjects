@@ -1,0 +1,346 @@
+/**
+ * Frontpage, Infopage, new event page, navbar, scaling, final changes - Julia Juntunen
+ * Frontpage - Sanni Oksanen
+ * Tables, buttons (on hover), editing teams, picking the checkpoint  - Emilia Uurasjärvi
+ * Final changes, scaling - Sera Ilvan
+ */
+
+
+* {
+  box-sizing: border-box;
+  background-color: #212529;
+  color: white;
+  font-family: "Roboto Slab";
+  font-style: normal;
+}
+
+p {
+  font-size: large;
+}
+
+button {
+  background-color: #212529;
+  border: 1px solid #b0bec5;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+  padding: 7px;
+}
+
+button a {
+  text-decoration: none;
+}
+
+button:hover,
+button:hover a {
+  background-color: #b0bec5;
+  color: #000;
+}
+
+table {
+  width: 600px;
+  text-align: left;
+}
+
+th,
+td {
+  border-bottom: 1px solid #ddd;
+  height: 35px;
+}
+
+input {
+  border: 1px solid #ccc;
+  padding: 6px;
+  margin-bottom: 2px; 
+  width: 100%;
+ }
+
+/**
+  Styling for most of the pages
+*/
+div.givepoints,
+div.selectcheckpoint,
+div.infopage,
+div.editTeams,
+div.editCheckpoints {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 3%;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+
+/**
+  Frontpage styling
+*/
+.homepageBody {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+iframe.homepageMap {
+  display: inline;
+}
+
+.frontpageButtons {
+  margin-top: 1%;
+  margin-bottom: 4%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.btn-login {
+  margin-right: 150%;
+}
+
+.updated {
+  letter-spacing: 0.05rem;
+  font-size: 14px;
+}
+
+
+/**
+  Infopage styling
+*/
+h2.eventinfoHeading {
+  font-weight: bold;
+  line-height: 40px;
+  text-align: center;
+}
+
+p.eventinfo {
+  font-weight: 400;
+  line-height: 130%;
+  white-space: pre-line;
+}
+
+
+/**
+  Navbar styling
+*/
+img.logo {
+  width: 75px;
+  height: 60px;
+  left: 548px;
+  top: 13px;
+}
+
+.nav {
+  text-align: center;
+  width: 100%;
+}
+
+td.navTop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 32px;
+  padding-bottom: 40px;
+}
+
+.heading {
+  text-decoration: none;
+  font-style: normal;
+  font-weight: bolder;
+  font-size: larger;
+  letter-spacing: 0.05rem;
+}
+
+
+/**
+  New event form -styling
+*/
+.eventformForm {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 3%;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+label {
+  font-size: large;
+}
+
+input.eventPlaces,
+input.eventTeams {
+  width: 10%;
+}
+
+input.mapsLink,
+input.eventName {
+  width: 30%;
+}
+
+textarea.eventInfoText {
+  height: 200px;
+  width: 50%;
+  resize: none;
+}
+
+
+/**
+  Login page and logged in -page styling
+*/
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding-top: 3%;
+}
+
+div.loginmenu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 3%;
+}
+
+.loginInput {
+  margin-top: 4px;
+  margin-bottom: 6px;
+}
+
+/**
+  Styling for the "previous page" button  
+*/
+.previous {
+  margin-top: 20px;
+}
+
+.previous a {
+  text-decoration: none;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: space-evenly;
+  border-bottom: none;
+}
+
+
+/* 
+  Select checkpoint -styling
+*/
+.CheckpointTableLinks a:hover {
+  color: black;
+}
+
+.CheckpointTableLinks a {
+  text-decoration: none;
+}
+
+.btnGivepoints {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+
+/* 
+ Edit checkpoints and teams -styling
+*/
+.btnSaveTeam,
+.btnSaveCheckpoint {
+  margin-left: 10px;
+}
+
+.newTeamName .newLocationName {
+  width: 100%;
+}
+
+
+/**
+  Styling for smaller screens (mobile phones)
+*/
+
+@media only screen and (max-width: 670px) {
+  table:not(.nav) {
+    width: fit-content;
+    text-align: left;
+    padding-bottom: 10%;
+  }
+
+  iframe.homepageMap {
+    width: 100%;
+  }
+
+  button {
+    font-size: medium;
+  }
+
+  .CheckpointTableLinks {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+
+  .btnGivepoints {
+    margin: 2%;
+  }
+
+  .btn-login {
+    margin-right: 10%;
+    white-space: nowrap;
+  }
+
+  h1,
+  h2 {
+    font-size: 25px;
+    text-align: center;
+  }
+
+  .checkpointAtGivepoints {
+    padding-top: 6%;
+    padding-bottom: 4%;
+  }
+
+  th,
+  td {
+    font-size: medium;
+    margin: 2%;
+  }
+
+
+  input.eventPlaces,
+  input.eventTeams {
+    width: 40%;
+  }
+
+  input.mapsLink,
+  input.eventName {
+    width: 70%;
+  }
+
+  textarea.eventInfoText {
+    height: 200px;
+    width: 100%;
+    resize: none;
+  }
+}
+
+@media only screen and (max-width: 330px) {
+  .heading {
+    font-size: large;
+  }
+}
