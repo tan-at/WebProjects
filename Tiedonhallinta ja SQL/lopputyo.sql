@@ -1,109 +1,114 @@
 -- CREATE TABLE statements
-CREATE TABLE Maa
-(
-    MaaID INT(15) AUTO_INCREMENT NOT NULL PRIMARY KEY,
-    MaaNimi VARCHAR(56) NOT NULL
+CREATE TABLE Country (
+    CountryID INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+    CountryName VARCHAR(50) NOT NULL
 );
 
-CREATE TABLE Urheilija
-(
-    UrheilijaID INT(15) AUTO_INCREMENT NOT NULL PRIMARY KEY,
-    Etunimi VARCHAR(20) NOT NULL,
-    Sukunimi VARCHAR(25) NOT NULL,
-    Paino DECIMAL(6,2) NOT NULL,
-    Syntymapaiva DATE NOT NULL,
-    Urheilulaji VARCHAR(20) NOT NULL,
-    KotimaaID INT(15) NOT NULL,
-    FOREIGN KEY(KotimaaID) REFERENCES Maa(MaaID)
+CREATE TABLE Athlete (
+    AthleteID INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+    FirstName VARCHAR(50) NOT NULL,
+    LastName VARCHAR(50) NOT NULL,
+    Birthdate DATE NOT NULL,
+    CountryID INT NOT NULL,
+    FOREIGN KEY (CountryID) REFERENCES Country(CountryID)
 );
 
-CREATE TABLE VanhatMitalit
-(
-    VanhaMitaliID INT(15) AUTO_INCREMENT NOT NULL PRIMARY KEY,
-    Urheilulaji VARCHAR(20) NOT NULL,
-    Vuosi INT(4) NOT NULL,
-    Kilpailu VARCHAR(30) NOT NULL,
-    Mitali VARCHAR(8) NOT NULL
+CREATE TABLE Sport (
+    SportID INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+    SportName VARCHAR(50) NOT NULL
 );
 
-CREATE TABLE Kilpailu
-(
-    KilpailuID INT(15) AUTO_INCREMENT NOT NULL PRIMARY KEY,
-    KilpailuPaiva DATE NOT NULL,
-    UrheiluLajiID INT(15) NOT NULL,
-    FOREIGN KEY(UrheiluLajiID) REFERENCES UrheiluLaji(UrheiluLajiID)
+CREATE TABLE Event (
+    EventID INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+    EventName VARCHAR(100) NOT NULL,
+    SportID INT NOT NULL,
+    StartDate DATE NOT NULL,
+    EndDate DATE NOT NULL,
+    FOREIGN KEY (SportID) REFERENCES Sport(SportID)
 );
 
-CREATE TABLE Tulokset
-(
-    TulosID INT(15) AUTO_INCREMENT NOT NULL PRIMARY KEY,
-    UrheilijaID INT(15) NOT NULL,
-    UrheilijaNimi VARCHAR(45) NOT NULL,
-    Aika TIME,
-    KilpailuID INT(15) NOT NULL,
-    FOREIGN KEY(UrheilijaID) REFERENCES Urheilija(UrheilijaID),
-    FOREIGN KEY(KilpailuID) REFERENCES Kilpailu(KilpailuID)
-);
-
-CREATE TABLE UrheiluLaji
-(
-    UrheiluLajiID INT(15) AUTO_INCREMENT NOT NULL PRIMARY KEY,
-    UrheiluLajiNimi VARCHAR(45) NOT NULL
+CREATE TABLE Result (
+    ResultID INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+    EventID INT NOT NULL,
+    AthleteID INT NOT NULL,
+    Rank INT,
+    Score DECIMAL(8,2),
+    FOREIGN KEY (EventID) REFERENCES Event(EventID),
+    FOREIGN KEY (AthleteID) REFERENCES Athlete(AthleteID)
 );
 
 
--- INSERT INTO statements to add contents to database
-INSERT INTO Kilpailu (KilpailuPaiva, UrheiluLajiID) VALUES ('2008-11-11', 1);
-INSERT INTO Kilpailu (KilpailuPaiva, UrheiluLajiID) VALUES ('2008-11-12', 2);
-INSERT INTO Kilpailu (KilpailuPaiva, UrheiluLajiID) VALUES ('2008-11-13', 3);
+-- Inserting countries
+INSERT INTO Country (CountryName) VALUES ('USA'), ('Canada'), ('Norway');
 
-INSERT INTO Tulokset (Aika, KilpailuID, UrheilijaID) VALUES ('0:30:10', 1, 1);
-INSERT INTO Tulokset (Aika, KilpailuID, UrheilijaID) VALUES ('0:41:57', 1, 2);
-INSERT INTO Tulokset (Aika, KilpailuID, UrheilijaID) VALUES ('0:34:17', 1, 3);
+-- Inserting athletes
+INSERT INTO Athlete (FirstName, LastName, Birthdate, CountryID) VALUES ('John', 'Doe', '1990-05-15', 1);
+INSERT INTO Athlete (FirstName, LastName, Birthdate, CountryID) VALUES ('Emma', 'Smith', '1988-12-20', 2);
+INSERT INTO Athlete (FirstName, LastName, Birthdate, CountryID) VALUES ('Michael', 'Johnson', '1992-08-25', 3);
+INSERT INTO Athlete (FirstName, LastName, Birthdate, CountryID) VALUES ('Sophie', 'Martin', '1995-04-10', 4);
+INSERT INTO Athlete (FirstName, LastName, Birthdate, CountryID) VALUES ('Erik', 'Olsen', '1993-11-03', 5);
 
-INSERT INTO VanhatMitalit (Urheilulaji, Vuosi, Kilpailu, Mitali) VALUES ('Hiihto', 1999, 'Hiihdon-MM', 'Hopea');
-INSERT INTO VanhatMitalit (Urheilulaji, Vuosi, Kilpailu, Mitali) VALUES ('Hiihto', 2001, 'Hiihdon-MM', 'Kulta');
-INSERT INTO VanhatMitalit (Urheilulaji, Vuosi, Kilpailu, Mitali) VALUES ('Hiihto', 1999, 'Hiihdon-MM', 'Kulta');
+-- Inserting sports
+INSERT INTO Sport (SportName) VALUES ('Skiing'), ('Ice Hockey'), ('Figure Skating');
+INSERT INTO Sport (SportName) VALUES ('Biathlon');
 
-INSERT INTO Urheilija (Etunimi, Sukunimi, Paino, Syntymapaiva, Urheilulaji, VanhaMitaliID, MaaID) VALUES ('Kaisa', 'Makarainen', 61, '1980-01-01', 'Hiihto', 1, 1);
-INSERT INTO Urheilija (Etunimi, Sukunimi, Paino, Syntymapaiva, Urheilulaji, VanhaMitaliID, MaaID) VALUES ('Maisa', 'Kakarainen', 65, '1981-02-02', 'Hiihto', 2, 2);
-INSERT INTO Urheilija (Etunimi, Sukunimi, Paino, Syntymapaiva, Urheilulaji, VanhaMitaliID, MaaID) VALUES ('Aisa', 'Akarainen', 63, '1979-03-03', 'Hiihto', 3, 3);
+-- Inserting events
+INSERT INTO Event (EventName, SportID, StartDate, EndDate) VALUES ('Ski Jumping', 1, '2023-02-15', '2023-02-20');
+INSERT INTO Event (EventName, SportID, StartDate, EndDate) VALUES ('Ice Hockey', 2, '2023-02-10', '2023-02-25');
+INSERT INTO Event (EventName, SportID, StartDate, EndDate) VALUES ('Biathlon 10km Sprint', 3, '2023-02-18', '2023-02-18');
+
+-- Inserting results
+INSERT INTO Result (EventID, AthleteID, Rank, Score) VALUES (1, 1, 2, 92.5); -- Ski Jumping score for John Doe
+INSERT INTO Result (EventID, AthleteID, Rank, Score) VALUES (2, 2, 1, NULL); -- Ice Hockey Score for Jane Doe. Can be dull due to not participating or getting disqualified
+INSERT INTO Result (EventID, AthleteID, Rank, Score) VALUES (3, 4, 3, 28.5); -- Biathalon score for Michael Johnson
+INSERT INTO Result (EventID, AthleteID, Rank, Score) VALUES (3, 5, 1, 26.2); -- Biathalon score for Sophie Martin
+INSERT INTO Result (EventID, AthleteID, Rank, Score) VALUES (3, 6, 2, 27.0); -- Biathalon score for Erik Olsen
 
 
 -- The names of all athletes in the database
-SELECT * FROM Urheilija 
+SELECT FirstName, LastName
+FROM Athlete
 ORDER BY 
-	Sukunimi DESC, 
-	Etunimi DESC;
+    LastName, 
+    FirstName;
 
--- The names and scores of participants to competition KilpailuID 1
-SELECT urheilija.Etunimi, Urheilija.Sukunimi, tulokset.Aika
-FROM Urheilija, Tulokset
-WHERE (Urheilija.UrheilijaID = Tulokset.UrheilijaID)
-	AND (Tulokset.KilpailuID = 1);
 
--- Days when biathalon will be held
-SELECT Kilpailu.KilpailuPaiva
-FROM Kilpailu, UrheiluLaji
-WHERE (Kilpailu.UrheiluLajiID = UrheiluLaji.UrheiluLajiID)
-	AND (UrheiluLaji.UrheiluLajiNimi = "Ampumahiihto");
+-- The names and scores of athletes competing in Biathlon
+SELECT Athlete.FirstName, Athlete.LastName, Result.Score
+FROM Athlete
+JOIN Result ON Athlete.AthleteID = Result.AthleteID
+JOIN Event ON Result.EventID = Event.EventID
+JOIN Sport ON Event.SportID = Sport.SportID
+WHERE Sport.SportName = 'Biathlon';
 
--- Old medals of athletes from Sweden
-SELECT urheilija.Etunimi, Urheilija.Sukunimi, vanhatmitalit.Vuosi, vanhatmitalit.Kilpailu, vanhatmitalit.Mitali
-FROM Urheilija, vanhatmitalit
-WHERE (Urheilija.VanhaMitaliID = vanhatmitalit.VanhaMitaliID)
-	AND (Urheilija.MaaID = 2);
+
+-- Days when Ice Hockey will be held
+SELECT Event.EventName, Event.StartDate, Event.EndDate
+FROM Event
+JOIN Sport ON Event.SportID = Sport.SportID
+WHERE Sport.SportName = 'Ice Hockey';
+
+
+-- Placements of athletes from USA
+SELECT Athlete.FirstName, Athlete.LastName, Event.EventName, Result.Rank
+FROM Athlete
+JOIN Result ON Athlete.AthleteID = Result.AthleteID
+JOIN Event ON Result.EventID = Event.EventID
+JOIN Country ON Athlete.CountryID = Country.CountryID
+WHERE Country.CountryName = 'USA'
+ORDER BY Event.StartDate, Result.Rank;
+
 
 
 -- Printouts of all databases and their contents
-DESC VanhatMitalit
+DESC Country
 
-DESC Urheilija
+DESC Athlete
 
-DESC Kilpailu
+DESC Sport
 
-DESC Maa
+DESC Event
 
-DESC Tulokset
+DESC Result
 
 DESC UrheiluLaji
