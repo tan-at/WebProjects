@@ -1,4 +1,4 @@
--- Corrected CREATE TABLE statements
+-- CREATE TABLE statements
 CREATE TABLE Maa
 (
     MaaID INT(15) AUTO_INCREMENT NOT NULL PRIMARY KEY,
