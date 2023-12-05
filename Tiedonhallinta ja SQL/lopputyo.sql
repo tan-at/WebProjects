@@ -110,5 +110,3 @@ DESC Sport
 DESC Event
 
 DESC Result
-
-DESC UrheiluLaji
