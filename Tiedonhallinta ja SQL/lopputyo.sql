@@ -51,6 +51,7 @@ CREATE TABLE UrheiluLaji
     UrheiluLajiNimi VARCHAR(45) NOT NULL
 );
 
+
 -- INSERT INTO statements to add contents to database
 INSERT INTO Kilpailu (KilpailuPaiva, UrheiluLajiID) VALUES ('2008-11-11', 1);
 INSERT INTO Kilpailu (KilpailuPaiva, UrheiluLajiID) VALUES ('2008-11-12', 2);
@@ -68,3 +69,41 @@ INSERT INTO Urheilija (Etunimi, Sukunimi, Paino, Syntymapaiva, Urheilulaji, Vanh
 INSERT INTO Urheilija (Etunimi, Sukunimi, Paino, Syntymapaiva, Urheilulaji, VanhaMitaliID, MaaID) VALUES ('Maisa', 'Kakarainen', 65, '1981-02-02', 'Hiihto', 2, 2);
 INSERT INTO Urheilija (Etunimi, Sukunimi, Paino, Syntymapaiva, Urheilulaji, VanhaMitaliID, MaaID) VALUES ('Aisa', 'Akarainen', 63, '1979-03-03', 'Hiihto', 3, 3);
 
+
+-- The names of all athletes in the database
+SELECT * FROM Urheilija 
+ORDER BY 
+	Sukunimi DESC, 
+	Etunimi DESC;
+
+-- The names and scores of participants to competition KilpailuID 1
+SELECT urheilija.Etunimi, Urheilija.Sukunimi, tulokset.Aika
+FROM Urheilija, Tulokset
+WHERE (Urheilija.UrheilijaID = Tulokset.UrheilijaID)
+	AND (Tulokset.KilpailuID = 1);
+
+-- Days when biathalon will be held
+SELECT Kilpailu.KilpailuPaiva
+FROM Kilpailu, UrheiluLaji
+WHERE (Kilpailu.UrheiluLajiID = UrheiluLaji.UrheiluLajiID)
+	AND (UrheiluLaji.UrheiluLajiNimi = "Ampumahiihto");
+
+-- Old medals of athletes from Sweden
+SELECT urheilija.Etunimi, Urheilija.Sukunimi, vanhatmitalit.Vuosi, vanhatmitalit.Kilpailu, vanhatmitalit.Mitali
+FROM Urheilija, vanhatmitalit
+WHERE (Urheilija.VanhaMitaliID = vanhatmitalit.VanhaMitaliID)
+	AND (Urheilija.MaaID = 2);
+
+
+-- Printouts of all databases and their contents
+DESC VanhatMitalit
+
+DESC Urheilija
+
+DESC Kilpailu
+
+DESC Maa
+
+DESC Tulokset
+
+DESC UrheiluLaji
