@@ -7,3 +7,5 @@ Web-sovelluksen käyttäjänhallintaa on projektissa **Task manager Backend**.
 **Web-ohjelmointi** keskittyy full-stack web-ohjelmointiin.
 
 **Kaupunkisuunnistus-app** on Skripti-ry:lle kurssilla ohjelmistotuotanto 2 tekemämme web-sovellus.
+
+**Tietojenhallinta ja SQL** on relaatiotietokantakurssilla tekemäni SQL-lopputyö.
